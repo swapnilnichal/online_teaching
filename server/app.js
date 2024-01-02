@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('./models/userModel');
@@ -7,8 +8,10 @@ const connectToMongoDB = require('./util/db');
 const {verifyToken} = require('./middleware/authMiddleware');
 const userRoutes = require('./routes/userRoutes')
 const secrete_key = process.env.JWT_SECRETE_KEY ;
-
 const app = express();
+app.use(cors({
+  origin: 'https://online-classes-platform.netlify.app',
+}));
 const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
