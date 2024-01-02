@@ -1,0 +1,696 @@
+.App {
+  text-align: center;
+}
+*{
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Navbar Related css */
+.logo-name {
+  color: #5f2ded;
+  font-family: 'Raleway', sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.logo-name:hover {
+  color: #5f2ded;
+}
+.navbar-links{
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+margin-right: 25px;
+}
+.nav-item.active a {
+  color: #5f2ded !important;
+  text-decoration: underline;
+  font-weight: 600;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 24px;
+  margin-right: 25px;
+}
+.nav-profile-img{
+  width: 30px;
+height: 30px;
+border-radius: 50%;
+margin-left: 12px;
+}
+
+/* Login Page related css */
+.form-Wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.login-img-div {
+  flex: 50%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
+.LoginImg{
+  width: 540px;
+  height: 530px;
+}
+.signup-form-div{
+  flex: 45%;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-header{
+  color: #5f2ded;
+  text-align: left;
+  font-family: Raleway;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.form-label{
+color: #121212;
+font-family: Raleway;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 14px;
+}
+#exampleInputEmail1,#exampleInputPassword1,#inputName,#inputNumber,.exampleInput{
+  width: 100%;
+  height: 54px;
+  flex-shrink: 0;
+}
+.form-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+#signup-form {
+  text-align: start;
+  padding: 10px 50px;
+  margin-top: 30px;
+}
+.form-text {
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+.forgot-pass-link{
+  text-decoration: none;
+  color: #6f5f5f;
+}
+.signupBtn {
+width: 130px;
+height: 49px;
+flex-shrink: 0;
+border-radius: 18px;
+background: #5F2DED;
+font-family: Raleway;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.signupBtn:hover{
+  background: #5F2DED;
+}
+.phone-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 397px;
+  height: 51px;
+  flex-shrink: 0;
+  border-radius: 27px;
+  border: 1px solid #121212;
+  background: #F2F0F0;
+  color: #686868b5;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  position: relative;
+}
+.phone-btn:hover{
+  background: #F2F0F0;
+  color: #686868de;
+}
+.frame4 {
+  width: 100%;
+  height: 19px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.frame-item {
+  border-top: 1px solid #808080ad;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0px;
+}
+.frame-item,
+.line-icon,
+.or {
+  position: relative;
+}
+.or {
+  display: inline-block;
+  width: 29px;
+  height: 19px;
+  flex-shrink: 0;
+}
+.line-icon {
+  width: 218px;
+  height: 1px;
+  object-fit: contain;
+}
+.signup-text{
+  color: #5F2DED;
+  font-weight: 700;
+}
+.error-text{
+  color: tomato;
+  font-weight: 600;
+}
+.signup-img-div {
+  flex: 65%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Home Component related css */
+.Home-Wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.homeLeftDiv {
+  flex: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.homeRightDiv{
+  flex: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 66px;
+  text-align: left;
+}
+.home-content-div{
+  flex: 50%;
+}
+/* .rightDivContent{
+  width: 530px;
+height: 496px;
+flex-shrink: 0;
+border-radius: 184.5px;
+opacity: 0.2;
+background: linear-gradient(45deg, #D1BBA3 0%, #CD9C71 100%);
+filter: blur(50px);
+} */
+.rightDivContent{
+  width: 530px;
+  height: 496px;
+  background-color: #d1bba30d;
+  border-radius: 50%;
+}
+.rightDivContent h2 {
+  color: #121212;
+font-family: Raleway;
+font-size: 44px;
+font-style: normal;
+font-weight: 700;
+line-height: 54px;
+letter-spacing: -1.35px;
+padding: 10px 10px
+}
+.online{
+  text-decoration: underline;
+  text-decoration-color: #5F2DED;
+}
+.achievement{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.achievementIcon{
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+.achievementContent{
+  color: #121212;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  margin-left: 10px;
+}
+.achievementContent span{
+  color: #121212;
+font-family: Raleway;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px;
+}
+.achievementOtherDetails{
+  color: #121212;
+font-family: Raleway;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px;
+padding: 5px 10px;
+}
+.home-img-div {
+  flex: 50%;
+  position: relative;
+  margin-top: 30px;
+}
+.profileImgText {
+  width: 255px;
+  height: 35px;
+  flex-shrink: 0;
+  position: absolute;
+  bottom: 72px;
+  left: 290px;
+  }
+.profileImgText p{
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  }
+
+  /* Sign up component's css */
+  .sign-up-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .signup-left-div {
+    flex: 50%;
+    display: flex;
+  }
+  .signup-right-div{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .signup-img{
+    width: 500px;
+    height: 500px;
+  }
+  .google-logo{
+    height: 43px;
+    width: 43px;
+    position: absolute;
+    left:7px;
+  }
+  .astrick{
+    color: red;
+    font-size: 25px;
+  }
+  .gender-label{
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  /* Forgot Password page css */
+  .forgotPage-main-div{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .forgotPage-left-div {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .forgotPage-right-div{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .forgot-img{
+    width: 500px;
+    height: 400px;
+  }
+  .inner-forgot-right-div{
+    padding: 0 60px;
+  }
+  .otp-space{
+    padding: 0 15px;
+  }
+  /* #otp-box {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000;
+  } */
+  .otp-comp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* About page css */
+.about-wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-left-div {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-right-div{
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  flex-direction: column;
+}
+.about-us-img{
+  width: 564px;
+  height: 324px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  border: 1px solid #E0464C;
+  background: linear-gradient(0deg, rgba(18, 18, 18, 0.41) 0%, rgba(18, 18, 18, 0.41) 100%), url(https://s3-alpha-sig.figma.com/img/21f9/1e92/2d41beb9c9de142b8b6bc745ce793dbb?Expires=1704672000&Signature=kvLz6Y75e5EeOCEuJxqjx0-4IsDkCyjS~gOsLLR5mwVkcXHs41ZdHGuMdAAMOzZstX53XjA4P~OFXI0E7YyJu1SWxD7s82qSD9gVfHshAimpp3kxg0YSmmWwDCIrIo7l9Oogv6YxpbhOgFDNfbgyMswDW53mIony6JtCN77~itcswsZE6~QMDSDy1tZd~mQEMnEJBBHmvIB6py1jKMRXlZxyDrVtlqgeYHSnkeHxOQSPs3mSG3HAP-mSeoCP08gKNYoU2if4xdhEva6nSEe-KUk3K-R5Twg51ScXr2fpWL9vmD9WX04hhvYDpguN50zBx4bTZ3ELSZUm0kDxTEn2sg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4), lightgray 50% / cover no-repeat;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.inner-right-about-div{
+  padding: 10px 60px;
+}
+.about-page-h1{
+  color: #121212;
+font-size: 44px;
+font-weight: 700;
+line-height: 54px; 
+letter-spacing: -1.35px;
+}
+.about-ul{
+list-style: none;
+color: #121212;
+font-size: 16px;
+font-weight: 500;
+line-height: 40px; 
+}
+.about-ul li{
+  list-style-image: url(/public/resources/check-mark.png);
+}
+
+/* Profile page css */
+.profile-wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile-left-div {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-right-div{
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 20px 62px;
+  align-content: center;
+  flex-direction: row;
+}
+.profile-img-wrapper{
+  position: relative;
+  width: 123px;
+  height: 112px;
+}
+.profile-page-img{
+  width: 113px;
+  height: 101.029px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+.plus-icon{
+  position: absolute;
+  bottom:10px;
+  right: 16px;
+}
+.edit-btn{
+  float: right !important;
+}
+.userName-header{
+  color: #121212;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: -0.35px;
+  padding: 24px;
+}
+.profile-header{
+  color: #5F2DED;
+  font-size: 28px;
+  font-weight: 500;
+}
+.save-btn{
+  border-radius: 4px;
+  background: rgba(95, 45, 237, 0.53);
+  color: #fff;
+  margin: 0 10px;
+}
+.logout-btn{
+  border-radius: 4px;
+  background: #5F2DED;
+  color: #fff;
+  margin: 0 10px;
+}
+
+/* Responsive styles for small devices (phones) */
+@media (max-width: 576px) {
+  .logo-name{
+    font-size: 30px;
+  }
+  .site-logo{
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+  }
+  .LoginImg{
+    width: 350px;
+    height: 350px;
+  }
+  #signup-form{
+    padding: 10px 0;
+  }
+  #exampleInputEmail1,#exampleInputPassword1{
+    width: 100%;
+    height: 48px;
+    flex-shrink: 0;
+  }
+  .homeLeftDiv {
+    flex: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  .homeRightDiv{
+    flex: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding: 20px 66px;
+    text-align: left;
+  }
+  .profileImg{
+    width: 350px;
+    height: 350px;
+  }
+  .profileImgText {
+    width: 200px;
+    height: 35px;
+    bottom: 42px;
+    left: 150px;
+  }
+  .profileImgText p{
+    font-size: 14px;
+    text-align: left;
+    line-height: normal;
+  }
+  .rightDivContent{
+    width: 350px;
+    height: 350px;
+    background-color: #d1bba30d;
+    border-radius: 50%;
+  }
+  .rightDivContent h2{
+    font-size: 30px;
+  }
+  .achievementContent,.achievementContent span {
+    font-size: 16px;
+  }
+  .achievementOtherDetails{
+    font-size: 14px;
+  }
+  .signup-left-div {
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-img{
+    width: 350px;
+    height: 350px;
+  }
+  .phone-btn{
+    width: 100%;
+  }
+  .forgot-img{
+    width: 350px;
+    height: 350px;
+  }
+  .about-right-div{
+    justify-content: flex-start;
+  }
+  .about-us-img{
+    width: 350px;
+    height: 300px;
+  }
+  .inner-right-about-div {
+    padding: 0 5px;
+  }
+  .about-page-h1{
+    font-size: 38px;
+  }
+  .profile-left-div,.profile-right-div{
+    margin: 10px;
+  }
+  .profile-container{
+    padding: 0;
+    margin-top: 15px;
+  }
+  .userName-header{
+    font-size: 24px;
+    line-height: 34px;
+    padding: 10px;
+  }
+}
+
+/* Responsive styles for medium devices (laptops) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .LoginImg{
+    width: 400px;
+    height: 370px;
+  }
+  .signup-left-div {
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-container{
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Responsive styles for large devices (desktops) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .Home-Wrapper{
+    flex-wrap: nowrap;
+  }
+  .login-img-div {
+    flex: 50%;
+  }
+  .LoginImg{
+    width: 450px;
+    height: 450px;
+  }
+  .homeLeftDiv {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  .homeRightDiv{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding: 20px 66px;
+    text-align: left;
+  }
+  .profileImg{
+    width: 400px;
+    height: 400px;
+  }
+  .rightDivContent{
+    width: 400px;
+    height: 400px;
+    background-color: #d1bba30d;
+    border-radius: 50%;
+  }
+}
+
+/* Responsive styles for extra large devices (large desktops) */
+@media (min-width: 1200px) {
+  .Home-Wrapper{
+    flex-wrap: nowrap;
+  }
+  .form-wrapper{
+    flex-wrap: nowrap;
+  }
+}
