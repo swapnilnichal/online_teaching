@@ -9,7 +9,6 @@ const Home = () => {
             <img src="../resources/trainer.png" alt="Trainer-profile" className="profileImg"/>
             <div className="profileImgText">
                 <p> Gold medalist  M.tech NSIT Delhi University</p>
-                {/* <p>NSIT Delhi University</p> */}
             </div>
         </div>
         </div>

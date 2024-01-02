@@ -59,7 +59,7 @@ const SignUp = () => {
     let validate = validateForm();
     if (validate) {
         try {
-            const response = await fetch('/api/signup', {
+            const response = await fetch('https://online-teaching-platform.onrender.com/api/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
