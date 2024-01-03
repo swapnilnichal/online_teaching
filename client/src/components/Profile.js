@@ -18,7 +18,7 @@ const Profile = () => {
 
   const getUserDetails = async (userId) => {
     try {
-      const response = await fetch(`https://online-teaching-platform.onrender.com/api/user/${userId}`, {
+      const response = await fetch(`/api/user/${userId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -41,8 +41,7 @@ const Profile = () => {
 
   const updateUser = ()=>{
     console.log(updatedUserData);
-    console.log(userId);
-    fetch(`https://online-teaching-platform.onrender.com/api/user/${userId}`, {
+    fetch(`/api/user/${userId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
   pincode: String,
 });
 
-userSchema.index({ username: 1 });
+// userSchema.index({ username: 1 });
 
 const User = mongoose.model('User', userSchema);
 

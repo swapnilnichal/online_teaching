@@ -33,7 +33,7 @@ const Login = () => {
         let validate = validateForm();
         if (validate) {
             try {
-                const response = await fetch('https://online-teaching-platform.onrender.com/api/login', {
+                const response = await fetch('/api/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

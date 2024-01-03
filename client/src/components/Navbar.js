@@ -26,7 +26,7 @@ const NavBar = () => {
         return ;
       }
 
-      const response = await fetch('https://online-teaching-platform.onrender.com/api/profile', {
+      const response = await fetch('/api/profile', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

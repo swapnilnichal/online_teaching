@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react";
 import { NavLink,useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+
   const [details,setDetails] = useState({
     username: '',
     email:'',
@@ -18,6 +19,9 @@ const SignUp = () => {
   const [formError,setFormError] = useState({});
   const navigate = useNavigate();
 
+  const apiKey = '1f6712ec49f240dfa0fe0cfc00dc349b';
+  const fullAddress = `${details.address}, ${details.city}, ${details.city},${details.pincode}`;
+
   const handleChange = (e)=>{
     const {name,value} = e.target;
     setDetails((prev)=>{
@@ -30,7 +34,6 @@ const SignUp = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(details.username.length <= 3){
       err.username = "name should have more than 3 characters";
-
     }
     if(!emailRegex.test(details.email)){
       err.email = "Invalid email address";
@@ -53,25 +56,56 @@ const SignUp = () => {
     }
   }
 
+  function validateAddress(apiKey, fullAddress) {
+    return new Promise((resolve, reject) => {
+        const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(fullAddress)}&key=${apiKey}`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Geocoding Response:', data);
+                if (data.results && data.results.length > 0) {
+                    const res = { message: 'Address is valid', status: 200, result: data.results };
+                    resolve(res);
+                } else {
+                    console.log('Address is not valid.');
+                    alert("invalid Address!, please provide a valid address");
+                    reject('Address validation failed.');
+                }
+            })
+            .catch(error => {
+                console.error('Error validating address:', error);
+                alert("invalid Address!, please provide a valid address");
+                reject('Address validation failed.');
+            });
+    });
+}
+
+
+
   const handleForm = async (e) => {
     e.preventDefault();
-    console.log(details)
+    // console.log(details);
     let validate = validateForm();
     if (validate) {
         try {
-            const response = await fetch('https://online-teaching-platform.onrender.com/api/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(details),
-            });
+          const validLocation =await validateAddress(apiKey,fullAddress);
+          if(validLocation && validLocation.status === 200){
+              console.log("valid location", validLocation.result);
+              const response = await fetch('/api/signup', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(details),
+               });
             if (!response.ok) {
                 throw new Error(`Server response not OK: ${response.status} ${response.statusText}`);
             }
             const data = await response.json();
             console.log(data);
             navigate('/login')
+          }
         } catch (error) {
             console.error('Error:', error);
         }
